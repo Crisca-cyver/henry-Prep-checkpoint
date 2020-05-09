@@ -2,34 +2,57 @@
 // Funciones
 
 function menorMayor(numeros) {
-  // Escribi una función llamada menorMayor que tome como entrada un arreglo de números y devuelva un arreglo 
-  // que contenga el menor número del arreglo en la posición cero y el mayor número del arreglo en la posición 1.
+  // Escribi una función llamada menorMayor que tome como entrada un arreglo
+  // de números y devuelva un arreglo 
+  // que contenga el menor número del arreglo en
+  //la posición cero y el mayor número del arreglo en la posición 1.
   // Ej: menorMayor([4, 6, 1, 7, 15]) // retorna [1, 15]
 
+  var new_array = [numeros[0], numeros[0]];
+
+  for(var index = 1 ; index < numeros.length; index++){
+    if( new_array[0] > numeros[index]) {
+      new_array[0] = numeros[index];
+    } else if (new_array[1] < numeros[index]) {
+      new_array[1] = numeros[index];
+    }
+    }
+  return new_array;
 }
 
 function stringMasLarga(strings) {
-  // Escribe una función llamada stringMasLarga, que tome un arreglo de strings llamado 'strings'
-  // tu función debe retornar el string más largo que hay en el arreglo
+  // Escribe una función llamada stringMasLarga, 
+  //que tome un arreglo de strings llamado 'strings'
+  // tu función debe retornar el string más
+  // largo que hay en el arreglo
   // Ej:
   // stringMasLarga(['hi', 'hello', 'ni hao', 'guten tag']); // returns 'guten tag'
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); // returns 'JavaScript'
 
+
 }
 
 function buscarAmigo(amigos, nombre) {
-  // Escribe una funcion que reciba un array de amigos (objetos) y un nombre (string).
-  // Tu función debe devolver el amigo que coincida con el nombre recibido por argumento.
+  // Escribe una funcion que reciba un array de amigos
+  // (objetos) y un nombre (string).
+  // Tu función debe devolver el amigo que coincida 
+  //con el nombre recibido por argumento.
   // Cada amigo tiene las propiedades nombre y edad.
   // Ej:
   //  var amigos = [{ nombre: 'toni', edad: 33 } , { nombre: 'Emi', edad: 25 }];
   //  buscarAmigo(amigos, 'toni') // retorna { nombre: 'toni', edad: 33 };
-  
+  for (var i = 0; i < amigos.length; i++) {
+    if (amigos[i].nombre === nombre) {
+      return amigos[i];
+    }
+  }
 }
 
 function sumArray(array, n) {
-  // Escribir un algoritmo que, dada un arreglo de números ordenados y un número n, 
-  // te devuelva true si alguna combinación de dos números cualesquiera suman n, y devuelva false si ninguna combinación
+  // Escribir un algoritmo que, dada un arreglo de números ordenados
+  // y un número n, 
+  // te devuelva true si alguna combinación de dos números
+  //cualesquiera suman n, y devuelva false si ninguna combinación
   // de dos números sumados da como resultado el número n.
   // Ej:
   // sumArray([2,5,7,10,11,15,20], 13)  // retorna true     2+11 suman 13
@@ -59,14 +82,22 @@ function crearClasePersona() {
   // nombre (string) , edad (integer) , hobbies (array de strings) , amigos (array de objetos)
   // Esta funcion debe retonar la clase Persona.
 
-  class Persona {
-    constructor(nombre, edad, hobbies, amigos) {
+  // class Persona {
+  //   constructor()
+  //   {
+  //     this.nombre
+  //     this.edad
+  //     this.hobbies
+  //     this.amigos
+  //     ) {
       
     }
 
     addFriend(nombre, edad) {
-      // el metodo addFriend recibe un string nombre y un entero edad y debe agregar un objeto:
-      // { nombre: nombre, edad: edad} al arreglo de amigos de la persona.
+      // el metodo addFriend recibe un string nombre
+      // y un entero edad y debe agregar un objeto:
+      // { nombre: nombre, edad: edad} al arreglo
+      // de amigos de la persona.
       // no debe retornar nada.
       
     }
@@ -74,14 +105,15 @@ function crearClasePersona() {
     addHobby(hobby) {
       // este método debe agregar un hobby (hobby) al arreglo de hobbies de la persona.
       // no debe retornar nada.
-      
+    // hobby = hobbies.push("leer");
+  
     }
     getFriends() {
       // Escribe una función que retorne un arreglo con sólo los nombres del arreglo de amigos
       // de la persona.
       // Ej:
       // persona.getFriends() // retorna ['toni', 'Leo', 'Manu']
-      
+      // Persona.getFriends();
     }
 
     getHobbies() {

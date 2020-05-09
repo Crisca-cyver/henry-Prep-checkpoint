@@ -1,0 +1,38 @@
+
+.listas {
+	font-size: 25px;
+  color:red;
+  background-color: yellow;
+	}
+.contenedor {
+    padding-right: 0px;
+    padding-left: 100px;
+    margin-left: 61px;
+    border-left-width: 0px;
+ background-color: yellow;
+}
+ .img { 
+position: relative;
+left: 200px;
+top: 100px;
+right: 2000px;
+padding-left: 10%;
+padding-top: 10%;
+padding-right: 10%;
+padding-bottom: 10%;
+}
+.Henry:hover { color: #FF0000;}
+
+/*Debes crear una hoja de estilos **externa** llamada `estilo1.css` 
+y dentro escribir las reglas necesarias tal que:
+
+    * el div contenedor tiene que tener un ancho de 500px,
+     el color de fondo amarillo y estar centrado.
+    * Los elementos de la lista deben tener un tamaño 
+    de letra de 25px y ser de color rojo.
+    * la imagen debe estar centrada.
+    * el color del link una vez que se haya
+     clickeado debe ser verde.
+
+  ### Deberia quedar asi
+  ![left](./img/ejercicio1.png).*/
