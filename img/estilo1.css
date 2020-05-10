@@ -1,18 +1,19 @@
 
-.listas {
+#listas {
 	font-size: 25px;
-  color:red;
-  background-color: yellow;
+    color: #FF0000;
 	}
 .contenedor {
+    position: relative;
+    width: 500px;
     padding-right: 0px;
     padding-left: 100px;
-    margin-left: 61px;
-    border-left-width: 0px;
+    margin-left: auto;
+    margin-right: auto; 
  background-color: yellow;
 }
  .img { 
-position: relative;
+display: block;
 left: 200px;
 top: 100px;
 right: 2000px;
@@ -21,8 +22,10 @@ padding-top: 10%;
 padding-right: 10%;
 padding-bottom: 10%;
 }
-.Henry:hover { color: #FF0000;}
 
+#link:focus {
+    color: green;
+}
 /*Debes crear una hoja de estilos **externa** llamada `estilo1.css` 
 y dentro escribir las reglas necesarias tal que:
 

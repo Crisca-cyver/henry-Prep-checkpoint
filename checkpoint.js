@@ -28,16 +28,14 @@ function stringMasLarga(strings) {
   // Ej:
   // stringMasLarga(['hi', 'hello', 'ni hao', 'guten tag']); // returns 'guten tag'
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); // returns 'JavaScript'
-  var largo = 0;
-  var maslargo = 0;
-  
-  for(var i=0; i < strings.length; i++){
-      if(largo < strings[i].length){
-        largo = strings[i].length;
-          maslargo = strings[i];
-      } 
-      return maslargo;   
-   } 
+ 
+  var stringMasLarga = strings [0];
+  for (var i = 1; i < strings.length; i++) {
+      if (strings[i].length > stringMasLarga.length) {
+        stringMasLarga = strings[i];
+      }
+  }
+  return stringMasLarga;
   }
 
 function buscarAmigo(amigos, nombre) {
@@ -112,18 +110,15 @@ function crearClasePersona() {
       // { nombre: nombre, edad: edad} al arreglo
       // de amigos de la persona.
       // no debe retornar nada.
-      var objeto = {
-        nombre: nombre,
-        edad: edad,
-      };
-      Persona.amigos.push();
+return this.amigos.push({nombre,edad});
     }
 
     addHobby(hobby) {
       // este método debe agregar un hobby (hobby) al
       // arreglo de hobbies de la persona.
       // no debe retornar nada.
-    //hobby = hobbies.push("leer");
+    return this.hobbies.push(hobby);
+
   
     }
     getFriends() {
@@ -133,14 +128,17 @@ function crearClasePersona() {
       // Ej:
       // persona.getFriends() // retorna ['toni', 'Leo', 'Manu']
       // Persona.getFriends();
-     
-    }
+  
+        return this.amigos.map (function(e){
+          return e.nombre;
+        })
+      }
 
     getHobbies() {
       // Escribe una función que retorne un arreglo con los hobbies de la persona
       // Ej:
       // persona.getHobbies() // retorna ['correr', 'dormir', 'nadar']
-    
+      return (this.hobbies);
     }
 
     getPromedioEdad() {
@@ -156,6 +154,10 @@ function crearClasePersona() {
       //   }]
       // }
       // persona.getPromedioEdad() // retorna 29
+      var sumaEdad = this.amigos.reduce(function(acumulador,element){
+        return acumulador + element.edad
+      },0)
+      return sumaEdad / this.amigos.length;
     }
 
    };
@@ -187,9 +189,10 @@ function filtrar(funcion) {
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
+  if (p.precio <= 22){
 
 };
-
+}
 
 // No modifiques nada debajo de esta linea
 // 
